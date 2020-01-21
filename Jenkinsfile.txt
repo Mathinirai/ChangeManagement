@@ -1,0 +1,21 @@
+pipeline {
+
+environment {
+        ENV = "test"    /**** Specify where you want to deploy - test, qa, prod ****/
+    }
+
+
+tools { 
+        maven 'Maven-3.6.0' 
+        jdk 'java_1.8'
+    }
+	
+	
+	 stage('BUILD') {  
+            steps {
+					withMaven(maven : 'Maven-3.6.0') {
+                'mvn clean install -P test -Dusername=mnirai99@gmail.com -Dpassword=Mathi99@ -Dorg=mnirai99-eval -Dapigee.config.file=config/test/edge.json -Dapigee.config.options=update'
+					}
+                }
+            } 
+}
