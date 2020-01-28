@@ -19,4 +19,4 @@ it ('Positive: assignLogPoint ', function() {
         
     });
 
-})
+});
