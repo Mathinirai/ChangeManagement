@@ -14,7 +14,7 @@ describe('AssignLogPoint Suite', function() {
         context = new Context();
     });
 
-it ('Positive: assignLogPoint ', function() {
+it ('Positive1: assignLogPoint ', function() {
 	    expect(assignLogPoint()).toBe();
         
     });
